@@ -51,7 +51,7 @@ departures_tmp.rename(columns={
     'Scheduled elapsed time (Minutes)' : 'sch_elapsed', 
     'Actual elapsed time (Minutes)' : 'act_elapsed',   
     'Departure delay (Minutes)' : 'dep_delay', 
-    'Wheels-off Time' : 'wheels_off', 
+    'Wheels-off time' : 'wheels_off', 
     'Taxi-Out time (Minutes)' : 'taxi_out', 
     'Delay Carrier (Minutes)' : 'delay_carrier', 
     'Delay Weather (Minutes)' : 'delay_weather',
