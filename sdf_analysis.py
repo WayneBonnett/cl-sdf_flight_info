@@ -33,8 +33,6 @@ arrivals_tmp.rename(columns={
 
 print(arrivals_tmp.columns)
 
-
-
 print(departures.shape)
 departures_tmp = departures.drop_duplicates()
 print(departures_tmp.shape)
