@@ -4,7 +4,7 @@ import matplotlib
 
 arrivals = pd.read_csv('./combined_data/arrivals.csv', index_col=1)
 departures = pd.read_csv('./combined_data/departures.csv', index_col=1)
-airlines = pd.read_csv('passenger_airlines.csv', index_col=0)
+'airlines = pd.read_csv('passenger_airlines.csv', index_col=0)
 
 print(arrivals.head(10))
 print(arrivals.info())
