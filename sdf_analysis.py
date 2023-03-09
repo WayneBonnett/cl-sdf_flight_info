@@ -13,7 +13,7 @@ print(arrivals.shape)
 arrivals_tmp = arrivals.drop_duplicates()
 print(arrivals_tmp.shape)
 arrivals_tmp.rename(columns={
-    'ID' : 'id', 
+    'ID' : 'airline', 
     'Date (MM/DD/YYYY)' : 'flight_date', 
     'Flight Number' : 'flight_number', 
     'Tail Number' : 'tail_number',
@@ -40,7 +40,7 @@ departures_tmp = departures.drop_duplicates()
 print(departures_tmp.shape)
 
 departures_tmp.rename(columns={
-    'ID' : 'id', 
+    'ID' : 'airline', 
     'Date (MM/DD/YYYY)' : 'flight_date', 
     'Flight Number' : 'flight_number', 
     'Tail Number' : 'tail_number',
