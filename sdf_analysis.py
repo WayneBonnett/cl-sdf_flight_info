@@ -1,63 +1,28 @@
 import pandas as pd
-import matplotlib
+import matplotlib 
+from matplotlib import pyplot as plt
 
-
-arrivals = pd.read_csv('./combined_data/arrivals.csv', index_col=1)
-departures = pd.read_csv('./combined_data/departures.csv', index_col=1)
-'airlines = pd.read_csv('passenger_airlines.csv', index_col=0)
+arrivals = pd.read_csv('arrivals.csv', usecols=['airline', 'arr_year', 'total_arrivals'])
+departures = pd.read_csv('departures.csv', usecols=['airline', 'dep_year', 'total_departures'])
 
 print(arrivals.head(10))
 print(arrivals.info())
-
 print(arrivals.shape)
-arrivals_tmp = arrivals.drop_duplicates()
-print(arrivals_tmp.shape)
-arrivals_tmp.rename(columns={
-    'ID' : 'airline', 
-    'Date (MM/DD/YYYY)' : 'flight_date', 
-    'Flight Number' : 'flight_number', 
-    'Tail Number' : 'tail_number',
-    'Origin Airport' : 'origin', 
-    'Scheduled Arrival Time' : 'sched_arr_time', 
-    'Actual Arrival Time' : 'act_arr_time',     
-    'Scheduled Elapsed Time (Minutes)' : 'sch_elapsed', 
-    'Actual Elapsed Time (Minutes)' : 'act_elapsed',   
-    'Arrival Delay (Minutes)' : 'arr_delay', 
-    'Wheels-on Time' : 'wheels_on', 
-    'Taxi-In time (Minutes)' : 'taxi_in', 
-    'Delay Carrier (Minutes)' : 'delay_carrier', 
-    'Delay Weather (Minutes)' : 'delay_weather',
-    'Delay National Aviation System (Minutes)'  : 'delay_natavsys',
-    'Delay Security (Minutes)' : 'delay_security',
-    'Delay Late Aircraft Arrival (Minutes)' : 'delay_late_arrival'
-   
-},inplace=True)
 
-print(arrivals_tmp.columns)
+arrivals['arr_year'] = arrivals['arr_year'].astype(int)
+arrivals.groupby(['arr_year', 'airline']).sum()['total_arrivals'].unstack().plot(kind='line', ylabel='# of flights')
+plt.xticks(arrivals['arr_year'].unique())
+plt.xlabel('Year')
+plt.title('Total SDF arrivals by Year')
+plt.show()
 
+print(departures.head(10))
+print(departures.info())
 print(departures.shape)
-departures_tmp = departures.drop_duplicates()
-print(departures_tmp.shape)
 
-departures_tmp.rename(columns={
-    'ID' : 'airline', 
-    'Date (MM/DD/YYYY)' : 'flight_date', 
-    'Flight Number' : 'flight_number', 
-    'Tail Number' : 'tail_number',
-    'Destination Airport' : 'dest', 
-    'Scheduled departure time' : 'sched_dep_time', 
-    'Actual departure time' : 'act_dep_time',     
-    'Scheduled elapsed time (Minutes)' : 'sch_elapsed', 
-    'Actual elapsed time (Minutes)' : 'act_elapsed',   
-    'Departure delay (Minutes)' : 'dep_delay', 
-    'Wheels-off time' : 'wheels_off', 
-    'Taxi-Out time (Minutes)' : 'taxi_out', 
-    'Delay Carrier (Minutes)' : 'delay_carrier', 
-    'Delay Weather (Minutes)' : 'delay_weather',
-    'Delay National Aviation System (Minutes)'  : 'delay_natavsys',
-    'Delay Security (Minutes)' : 'delay_security',
-    'Delay Late Aircraft Arrival (Minutes)' : 'delay_late_arrival'
-   
-},inplace=True)
-
-print(departures_tmp.columns)
+departures['dep_year'] = departures['dep_year'].astype(int)
+departures.groupby(['dep_year', 'airline']).sum()['total_departures'].unstack().plot(kind='line', ylabel='Total flights')
+plt.xticks(departures['dep_year'].unique())
+plt.xlabel('Year')
+plt.title('Total SDF Departures by Year')
+plt.show()
