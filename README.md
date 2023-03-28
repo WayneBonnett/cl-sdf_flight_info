@@ -5,4 +5,4 @@
 #     Date Range: 1/1/2018 - 12/31/2022
 # Passenger airline data only (no freight)
 #   Total Arrivals: 66,294
-# Total Departures: 66,313
+# Total Departures: 66,299
