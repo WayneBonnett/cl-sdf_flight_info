@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib 
 from matplotlib import pyplot as plt
 
-arrivals = pd.read_csv('arrivals.csv', usecols=['airline', 'arr_year', 'total_arrivals'])
-departures = pd.read_csv('departures.csv', usecols=['airline', 'dep_year', 'total_departures'])
+arrivals = pd.read_csv('./combined_data/arrivals.csv', usecols=['airline', 'arr_year', 'total_arrivals'])
+departures = pd.read_csv('./combined_data/departures.csv', usecols=['airline', 'dep_year', 'total_departures'])
 
 print(arrivals.head(10))
 print(arrivals.info())
