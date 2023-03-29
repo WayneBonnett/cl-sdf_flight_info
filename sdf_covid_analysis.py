@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 def show_arrivals():
     #Load and view some of the arrival data to verify it has loaded properly.
-    arrivals = pd.read_csv('./combined_data/arrivals.csv', usecols=['airline', 'arr_year', 'total_arrivals'])
+    arrivals = pd.read_csv('./assets/arrivals.csv', usecols=['airline', 'arr_year', 'total_arrivals'])
     print(arrivals.head(10))
     print(arrivals.info())
     print(arrivals.shape)
@@ -23,7 +23,7 @@ def show_arrivals():
 def show_departures():
     
     #Load and view some of the departure data to verify it has loaded properly.
-    departures = pd.read_csv('./combined_data/departures.csv', usecols=['airline', 'dep_year', 'total_departures'])
+    departures = pd.read_csv('./assets/departures.csv', usecols=['airline', 'dep_year', 'total_departures'])
     print(departures.head(10))
     print(departures.info())
     print(departures.shape)
