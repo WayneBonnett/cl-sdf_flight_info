@@ -15,12 +15,12 @@ Data incudes only airlines that had flights from January 2018. #Spirit, Jet Blue
 
 
 # Final project for Code Kentucky Data Analysis 1 class.
-
 # Summary
 
 This project contains a Jupyter Notebook file "sdf_covid_analysis.ipynb" that analyzes the total number of flights per year between 1/2018 and 12/2022. There is also a .py file that productes similar results using functions.
 
 # Prerequisites
+
 
 * Python 3.9 or higher
 * jupyter
@@ -37,6 +37,7 @@ This project contains a Jupyter Notebook file "sdf_covid_analysis.ipynb" that an
 * Review the results.
 
 # Skills Summary This project demonstrates the following skills:
+
 
 * Reading data from a CSV file
 * Using data types
