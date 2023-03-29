@@ -43,4 +43,4 @@ This project contains a Jupyter Notebook file "sdf_covid_analysis.ipynb" that an
 * Describing the shape of a data set (num records, num columns, column names, unique values)
 * Cleaning data
 * Analyzing data with graphs using Pandas and Matplotlib
-* Writing Python functions
+* Writing Python functions (in sdf_covid_analysis.py file, not in the Jupyter notebook.)
