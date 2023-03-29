@@ -7,6 +7,7 @@ Actual Dataset: https://transtats.bts.gov/ONTIME/
 Date Range: 1/1/2018 - 12/31/2022
 
 Passenger airline data only (no freight)
+
   Total Arrivals: 64,395
 Total Departures: 64,402
 
