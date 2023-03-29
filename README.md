@@ -11,7 +11,7 @@ Passenger airline data only (no freight)
   Total Arrivals: 64,395
 Total Departures: 64,402
 
-Data incudes only airlines that had flights from January 2018. #Spirit, Jet Blue, Breeze were removed from the data because they #didn't start until after 2020.
+Data incudes only airlines that had flights from January 2018. #Spirit, Jet Blue, Breeze were removed from the data because they didn't start until after 2020.
 
 
 # Final project for Code Kentucky Data Analysis 1 class.
@@ -22,10 +22,10 @@ This project contains a Jupyter Notebook file "sdf_covid_analysis.ipynb" that an
 
 # Prerequisites
 
-Python 3.9 or higher
-Jupyter
-Matplotlib
-pandas
+ Python 3.9 or higher
+ jupyter
+ matplotlib
+ pandas
 
 # Steps
 
